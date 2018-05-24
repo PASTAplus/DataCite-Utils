@@ -15,14 +15,16 @@ if (len(sys.argv) < 3):
 
 username, password = sys.argv[1:]
 doi_list = get_doi_list(username, password)
-
+tombstone_landing_page = \
+    'https://environmentaldatainitiative.org/data-package-not-available/'
 count = 0
 
 for doi in doi_list:
     if not "10.6073/PASTA" in doi:
         datacite_url = endpoint + doi
         response = requests.delete(datacite_url, auth=(username, password))
-        logger.info("doi: " + doi + "  response: " + str(response.status_code) + " " + response.text)
+        logger.info("doi: " + doi + "  response: " + 
+                    str(response.status_code) + " " + response.text)
         count = count + 1
 
 logger.info("Total inactivations: " + str(count))
