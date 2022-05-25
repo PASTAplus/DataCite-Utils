@@ -34,8 +34,7 @@ username, password = sys.argv[1:]
 doi_list = get_doi_list(username, password)
 
 datacite_doi_endpoint = 'https://mds.datacite.org/doi/'
-tombstone_landing_page = \
-    'https://environmentaldatainitiative.org/data-package-not-available'
+tombstone_landing_page = 'https://edirepository.org/data/tombstone'
 count = 0
 
 for doi in doi_list:

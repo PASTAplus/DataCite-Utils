@@ -15,8 +15,7 @@ if (len(sys.argv) < 3):
 
 username, password = sys.argv[1:]
 doi_list = get_doi_list(username, password)
-tombstone_landing_page = \
-    'https://environmentaldatainitiative.org/data-package-not-available/'
+tombstone_landing_page = 'https://edirepository.org/data/tombstone'
 count = 0
 
 for doi in doi_list:
