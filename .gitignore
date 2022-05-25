@@ -132,3 +132,4 @@ dmypy.json
 .idea
 *.sqlite
 config.py
+datacite_config.py
